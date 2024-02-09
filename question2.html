@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function check() {
+        const userInput = document.getElementById("userInput").value;
+        if (isNaN(userInput) || userInput == "") {
+          console.log("Not a number");
+          document.getElementById("error").style.display = "block";
+        } else {
+          console.log("a number");
+          document.getElementById("error").style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="#">
+      <input type="text" name="" id="userInput" />
+      <button onclick="check()">Submit</button>
+      <p id="error" style="color: red; display: none">
+        Please make sure u enter a number.!
+      </p>
+    </form>
+  </body>
+</html>
